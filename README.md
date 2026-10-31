@@ -2,7 +2,7 @@
 
 本仓库公开提供 Yuchen Panel 的安装脚本、版本清单和 Release 安装包，供客户自行部署。
 
-当前镜像版本：**1.0.5**。软件名称、安装目录和管理命令仍为 `yuchen-panel`。
+当前镜像版本：**1.0.6**。软件名称、安装目录和管理命令仍为 `yuchen-panel`。
 
 ## 一键安装
 
@@ -42,10 +42,10 @@ YC_UPDATE_MANIFEST_URL=https://raw.githubusercontent.com/sle58083/chenxing/main/
 
 ## 发布说明
 
-- 安装包从上游已发布的 1.0.5 原样镜像，校验值一致；不对软件功能进行改动。
+- 安装包从上游已发布的 1.0.6 原样镜像，校验值一致；不对软件功能进行改动。
 - 原 `sle58083/yuchen-panel` 仓库内容未因本发布入口而修改。
 - 本仓库不自动同步上游新版本；后续版本需按同样流程单独发布。
-- 本次镜像包含 v1.0.5 的新建 gRPC 入站随机 serviceName 修复，以及既有 SOCKS5 随机用户名安全修复；尚未新增企业授权系统。
+- 本次镜像包含 v1.0.6 的均衡预设 gRPC serviceName 修复、新建 gRPC 随机 serviceName，以及既有 SOCKS5 随机用户名安全修复；尚未新增企业授权系统。
 - 安装包保留上游已有源码、文档和许可材料；本仓库不宣称安装包为无源码版本。
 
 详细来源与校验值见 [PROVENANCE.md](PROVENANCE.md)。
