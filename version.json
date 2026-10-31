@@ -1,22 +1,18 @@
 {
-  "latest": "1.0.3",
-  "version": "1.0.3",
+  "latest": "1.0.5",
+  "version": "1.0.5",
   "codename": "stable",
-  "package": "yuchen-panel-v1.0.3.zip",
-  "download_url": "https://github.com/sle58083/chenxing/releases/download/v1.0.3/yuchen-panel-v1.0.3.zip",
-  "sha256": "1169daacefd9d7c5677854a91e44db205f8a71d67a2f70f4f59702b01b5db997",
+  "package": "yuchen-panel-v1.0.5.zip",
+  "download_url": "https://github.com/sle58083/chenxing/releases/download/v1.0.5/yuchen-panel-v1.0.5.zip",
+  "sha256": "e33376bbc37932c79ce8e85bc3b733e76f9f77fe735e7e806b3d5c5eab2c4374",
   "min_supported_version": "0.7.5",
-  "released_at": "2026-10-15T09:28:07.941407Z",
+  "released_at": "2026-10-31T18:49:18Z",
   "changelog": [
-    "包月限流量：按客户 ID 汇总 Xray 上传与下载，Stats API 仅监听本机",
-    "epoch 与服务器游标持久化，处理重启与重复上报",
+    "新建 gRPC 入站时自动生成随机 12 位 serviceName；编辑已有节点保留原 serviceName，不会导致已有客户端突然断线",
+    "SOCKS5 入站未填写用户名时使用 crypto/rand 生成 12 位随机用户名，避免不同部署共用固定账号",
+    "已有非空 SOCKS5 用户名（包括历史 yuchen）和手工填写值继续保留",
+    "按客户 ID 汇总 Xray 上传与下载，持久化 epoch 与服务器计数游标",
     "到期或超限停用；延长已有到期日才续费，清零并恢复启用",
-    "长期客户首次设置到期日保留用量及启用状态",
-    "区分负数与超范围流量上限提示，移除版本跟踪的过程报告",
-    "客户列表按字节显示本周期用量，30 秒刷新且编辑时暂停",
-    "正常在线限额执行通常有约 30–60 秒延迟，异常时可能更久",
-    "升级会轮换 JWT 密钥，旧会话失效，需要重新登录",
-    "协调者在真机上实测确认：按客户计量、超限停用与旧凭据撤销、续费清零与恢复连接、长期客户首次设到期日不清零",
-    "修复启动日志硬编码旧版本号，升级后日志与实际版本一致"
+    "升级会轮换 JWT 签名密钥，旧会话失效，需要重新登录"
   ]
 }
